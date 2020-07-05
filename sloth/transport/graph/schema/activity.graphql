@@ -1,0 +1,37 @@
+extend type Query {
+    activities(
+        first: Int
+        last: Int
+        after: String
+        before: String
+    ): ActivityConnection!
+}
+
+union ActivityCreateResult = Activity | ValidationError
+
+extend type Mutation {
+    activityCreate(input: ActivityCreateInput!): ActivityCreateResult!
+}
+
+input ActivityCreateInput {
+    startedAt: Time!
+    endedAt: Time!
+    description: String!
+}
+
+
+type Activity implements Node {
+    id: ID!
+    """Date time range indicating when activity happend"""
+    range: DateTimeRange!
+    description: String!
+}
+
+type ActivityEdge {
+    node: Activity!
+    cursor: String!
+}
+
+type ActivityConnection {
+    edges: [ActivityEdge!]!
+}

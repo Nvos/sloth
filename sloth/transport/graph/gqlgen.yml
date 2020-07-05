@@ -1,0 +1,28 @@
+schema:
+  - schema/**/*.graphql
+
+exec:
+  filename: generated/exec.go
+  package: generated
+
+model:
+  filename: model/model_generated.go
+  package: model
+
+resolver:
+  type: Resolver
+  layout: follow-schema
+  dir: resolver
+
+autobind:
+  - "sloth/feature/user"
+  - "sloth/feature/activity"
+  - "sloth/fragment"
+
+models:
+  ID:
+    model:
+      - github.com/99designs/gqlgen/graphql.IntID
+  Int:
+    model:
+      - github.com/99designs/gqlgen/graphql.Int

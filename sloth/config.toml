@@ -1,0 +1,14 @@
+
+[environment]
+  mode = "develop"
+
+[logger]
+  level = "info"
+
+[security]
+  jwtrefreshtokenlifetime = "24h0m0s"
+  jwttokenlifetime = "30m0s"
+
+[server]
+  host = "http://localhost"
+  port = 8080

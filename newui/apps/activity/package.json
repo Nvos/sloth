@@ -1,0 +1,38 @@
+{
+  "name": "@sloth/activity",
+  "version": "1.0.0",
+  "private": true,
+  "main": "index.tsx",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "graphql:codegen": "graphql-codegen --config codegen.yml"
+  },
+  "dependencies": {
+    "@pika/react": "^16.13.1",
+    "@pika/react-dom": "^16.13.1",
+    "@sloth/system": "link:../../../../packages/system",
+    "@urql/devtools": "^2.0.2",
+    "@urql/exchange-graphcache": "^3.0.1",
+    "emotion-theming": "^10.0.27",
+    "graphql": "^15.2.0",
+    "graphql-tag": "^2.10.3",
+    "react-hook-form": "^6.0.1",
+    "urql": "^1.9.8"
+  },
+  "devDependencies": {
+    "@graphql-codegen/cli": "1.16.0",
+    "@graphql-codegen/introspection": "1.16.0",
+    "@graphql-codegen/typescript": "1.16.0",
+    "@graphql-codegen/typescript-operations": "1.16.0",
+    "@graphql-codegen/typescript-urql": "^1.16.0",
+    "@rollup/plugin-babel": "^5.0.4",
+    "@types/react": "^16.9.35",
+    "@types/react-dom": "^16.9.8",
+    "babel-plugin-emotion": "^10.0.33",
+    "graphql-tag": "^2.10.3",
+    "typescript": "^3.9.3",
+    "vite": "^1.0.0-beta.10",
+    "vite-plugin-react": "^3.0.1"
+  }
+}

@@ -1,0 +1,42 @@
+mutation AppActivityCreate(
+  $startedAt: Time!
+  $endedAt: Time!
+  $description: String!
+) {
+  activityCreate(
+    input: {
+      startedAt: $startedAt
+      endedAt: $endedAt
+      description: $description
+    }
+  ) {
+    __typename
+    ... on Activity {
+      id
+      range {
+        startedAt
+        endedAt
+      }
+      description
+    }
+    ... on ValidationError {
+      message
+    }
+  }
+}
+
+query AppActivities($first: Int, $last: Int, $after: String, $before: String) {
+  activities(first: $first, last: $last, after: $after, before: $before) {
+    edges {
+      node {
+        id
+        range {
+          startedAt
+          endedAt
+        }
+        description
+      }
+      cursor
+    }
+  }
+}
