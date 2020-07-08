@@ -5,6 +5,7 @@ import {
   ActivityCreateInput,
   Activity,
 } from './generated/graphql';
+import { Button } from '@chakra-ui/core';
 import { useForm, SubmitHandler } from 'react-hook-form';
 
 const ActivityTable: FC = () => {
@@ -64,7 +65,7 @@ const ActivityTable: FC = () => {
             />
           </label>
 
-          <button>Submit</button>
+          <Button type="submit">Submit</Button>
         </form>
       </div>
       <div>{error && `error=${error}`}</div>

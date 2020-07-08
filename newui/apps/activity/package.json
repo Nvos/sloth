@@ -9,6 +9,9 @@
     "graphql:codegen": "graphql-codegen --config codegen.yml"
   },
   "dependencies": {
+    "@chakra-ui/core": "1.0.0-next.4",
+    "@emotion/core": "^10.0.28",
+    "@emotion/styled": "^10.0.27",
     "@pika/react": "^16.13.1",
     "@pika/react-dom": "^16.13.1",
     "@sloth/system": "link:../../../../packages/system",

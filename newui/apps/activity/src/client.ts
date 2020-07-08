@@ -19,15 +19,6 @@ import {
   Activity,
 } from './generated/graphql';
 
-const activityCreate = (
-  result: ActivityCreateResult,
-  args: Variables,
-  cache: Cache,
-  info: ResolveInfo
-) => {
-  activityCreate
-};
-
 const cacheExchange = createCacheExchange({
   // TODO: verify if generated schema is really incompatible with urql
   schema: schema as any,
@@ -36,7 +27,6 @@ const cacheExchange = createCacheExchange({
   },
   updates: {
     Mutation: {
-      wtf: activityCreate,
       activityCreate: (result, args, cache, info) => {
         const typed = (result as unknown) as {
           activityCreate: ActivityCreateResult;

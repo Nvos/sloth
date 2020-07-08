@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
-import { Box, Button, Table, theme, TextField } from '@sloth/system';
+import { theme } from '@sloth/system';
 import { ThemeProvider } from 'emotion-theming';
 import { Provider } from 'urql';
 import { ActivityTable } from './ActivityTable';
 import { client } from './client';
+import { Box } from '@chakra-ui/core';
 
 function App() {
   return (
@@ -15,7 +16,6 @@ function App() {
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
-            color: 'red',
           }}
         >
           <ActivityTable />
